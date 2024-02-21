@@ -1,5 +1,8 @@
 import {useState, useEffect} from "react"
 import{useNavigate} from "react-router-dom"
+import {Card,CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function NewReview(){
     const INITIAL_STATE = {
@@ -67,14 +70,19 @@ function NewReview(){
             </form>
             <div>
                 {/* index was added cause for some reason it removed the id error on the console log  */}
-                <h3>Reviews</h3>
-                {reviews.map((review, index) => (
-                    <div key={index}>
-                        <h4>Name: </h4>
-                        <h4>Rating: {review.rating}</h4>
-                        <p>Comment: {review.comment}</p>
+                
+                 {reviews.map((review, index) => (
+                    <Card>
+                    <div key={index} >
+                       <CardTitle> Name: </CardTitle> 
+                        <CardText> Rating: {review.rating}   </CardText>
+                        <CardSubtitle> <p>Comment: {review.comment}</p> </CardSubtitle>
                     </div>
-                ))}
+                    </Card>
+                    ))}
+                
+                <h3>Reviews</h3>
+
             </div>
         </div>
     )
