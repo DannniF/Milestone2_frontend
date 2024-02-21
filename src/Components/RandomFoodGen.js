@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
 import{useNavigate} from "react-router-dom"
 
-function NewReview(){
+function RandomFood(){
     const INITIAL_STATE = {
         rating: "",
         comment: "",
@@ -14,7 +14,7 @@ function NewReview(){
 
     useEffect(() => {
         async function fetchData() {
-            const url = `${process.env.REACT_APP_BACKEND_URL}/reviews/all`
+            const url = `${process.env.REACT_APP_BACKEND_URL}/review/all`
             const response = await fetch(url)
             const data = await response.json()
             console.log(data)
@@ -39,7 +39,7 @@ function NewReview(){
             //creating our animal to connect to db
           
 
-            const url = `${process.env.REACT_APP_BACKEND_URL}/reviews`
+            const url = `${process.env.REACT_APP_BACKEND_URL}/review`
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -80,4 +80,4 @@ function NewReview(){
     )
 }
 
-export default NewReview
+export default RandomFood   

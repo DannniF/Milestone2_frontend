@@ -5,9 +5,10 @@ import NewFood from './Components/NewFood';
 import Home from './Components/Home';
 import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
-import SignIn from './Components/SignIn';
+// import SignIn from './Components/SignIn';
 import Cart from './Components/Cart.js';
-
+import RandomFood from './Components/RandomFoodGen.js';
+import Login from './Components/Login.js';
 //Home, New, FoodPage
 
 function App() {
@@ -21,12 +22,13 @@ function App() {
             <Route path ='/food/new' element={<NewFood/>}/>
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
+            <Route path = '/food/random' element= {< RandomFood/>}/>
 
-            <Route path = '/SignIn' element={<SignIn/>}/>
+            {/* <Route path = '/SignIn' element={<SignIn/>}/> */}
             <Route path ='/Cart'  element={<Cart/>}/>
 
 
-            <Route path = '/Login' element={<Login/>}/>
+            {/* <Route path = '/Login' element={<Login/>}/> */}
 
             {/* <Route path = '/SignIn' element={<SignIn/>}/> */}
 
