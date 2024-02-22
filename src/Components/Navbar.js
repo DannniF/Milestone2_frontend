@@ -1,5 +1,5 @@
 import { React, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from '../image/Foddie Central.png'
 import  './Navbar.css';
 import { Dropdown, DropdownButton,ToggleButton } from "react-bootstrap";
@@ -7,9 +7,20 @@ import { Dropdown, DropdownButton,ToggleButton } from "react-bootstrap";
 
 
 
-function Navbar() {
+function Navbar({isLoggedIn, logout}) {
     const [cartQuantity, setcartQuantity]=useState(0)
-    return(
+    const navigate = useNavigate();
+
+    const logoutUser = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('loggedin');
+        
+        //from app props
+        logout();
+        navigate('/login');
+    }
+    
+    return (
         <nav>
 
             {/* first  row of the navbar */}
@@ -62,12 +73,22 @@ search
      {/* login & sign up*/}
      <div className="right">
 
-     <div className="loginSignup"> 
-    Login 
-    <Link to="/signin">  
-     <span class="material-symbols-outlined">person</span>
-     </Link>
-</div>
+        {isLoggedIn ? 
+            <div className="loginSignup"> 
+                Logout 
+                <Link onClick={logoutUser}>  
+                    <span class="material-symbols-outlined">person</span>
+                </Link>
+            </div>
+            :
+            <div className="loginSignup"> 
+                Login 
+                <Link to="/login">  
+                    <span class="material-symbols-outlined">person</span>
+                </Link>
+            </div>    
+        }
+
         
 {/* shopping_cart_checkout */}
 <div className="cartNumber">
