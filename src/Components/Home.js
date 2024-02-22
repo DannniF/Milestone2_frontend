@@ -31,7 +31,8 @@ function Home() {
    return (
     <div>
         {display}
-        <Link to={`/food/review`}>Review </Link>
+           <Link to={`/food/review`}>Review </Link>
+           <Link to={`/login`}>Login</Link>
     </div>
    )
 }

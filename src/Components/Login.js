@@ -2,21 +2,22 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Login(props) {
+function Login({login}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isNewAccount, setIsNewAccount] = useState(false);
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        login({email, password})
+        loginUser({email, password})
     }
 
-    const login = ({ email, password }) => {
+
+    const loginUser = ({ email, password }) => {
 
         console.log(JSON.stringify({ email, password }));
     
@@ -43,6 +44,14 @@ function Login(props) {
                 // Assuming setIsLoggedIn is defined elsewhere and accessible here
                 setIsLoggedIn(true);
                 alert('Login successful');
+                //save the token to browser local storage for auth
+                localStorage.setItem('token', data.data);
+                localStorage.setItem('loggedin', true);
+
+                //from app props
+                login();
+                //get local storage
+                console.log('token from storage -->' + localStorage.getItem('token'));
             }
         })
         .catch((err) => {
@@ -51,8 +60,14 @@ function Login(props) {
         });
     }
 
+//     const handleLogout = () => {
+//   // Clear the user's authentication token from the browser's local storage
+//   localStorage.removeItem("authToken");
 
-
+//   // Update the state variable to indicate that the user is logged out
+//   setIsLoggedIn(false);
+// };
+    
 
     // const onButtonClick = (props) => {
     //     //Set initial error values to empty
@@ -147,12 +162,15 @@ function Login(props) {
                             value='Log in' />
                     </div>
                     <div className='inputContainer'>
-                        <input
-                            className='inputButton'
-                            type='button'
-                            //onClick={onButtonClick}
-                            value='Create a new account' />
+                        <a href="#" onClick={(e) => { navigate('/signup')}}>Create a new account</a>
                     </div>
+                    {/* <div>
+      {isLoggedIn ? (
+        <button onClick={handleLogout}>Logout</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+      )}
+    </div> */}
                 </form>
             </div>
         )
