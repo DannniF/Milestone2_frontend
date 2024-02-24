@@ -11,9 +11,7 @@ import SignUp from './Components/SignUp.js';
 import Footer from './Components/Footer.js';
 import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
-
 import Cart from './Components/Cart.js';
-import RandomFood from './Components/RandomFood.js';
 
 
 
@@ -50,10 +48,8 @@ function App() {
             <Route path ='/food/new' element={<NewFood/>}/>
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
-            <Route
-            path='/login' element={!isLoggedIn ? <Login login={login} /> : <Navigate to="/" />}/>
-            <Route path='/signup'
-            element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
+            <Route path='/login' element={!isLoggedIn ? <Login login={login} /> : <Navigate to="/" />}/>
+            <Route path='/signup' element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
             <Route path ='/Cart'  element={<Cart/>}/>
            <Route path = '/food/random' element={<RandomFood/>}/>
             <Route path = '/food/description/:id' element={<UpdateForm/>} />
