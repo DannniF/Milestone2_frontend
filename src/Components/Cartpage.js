@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import Nav from './components/Nav';
-import ProductList from './components/ProductList';
-import CartContext from './context/CartContext';
-import { commerce } from './lib/Commerce';
+import CartProductList from './CartProductList';
 
-function App() {
+
+function Shopping() {
   const [cart, setCart] = useState();
 
   const addProductToCart = (productId) => {
@@ -25,15 +22,14 @@ function App() {
 
   return (
     <div className="container">
-      <CartContext.Provider value={{cart, setCart, addProductToCart}}>
-        <Nav />
+        
         <div className="container">
           <h2>Products</h2>
         </div>
-        <ProductList />
-      </CartContext.Provider>
+        <CartProductList />
+      
     </div>
   );
 }
 
-export default App;
+export default Shopping;

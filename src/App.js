@@ -13,7 +13,7 @@ import UpdateForm from './Components/UpdateForm.js';
 import Footer from './Components/footer.js';
 import Cart from './Components/Newshoppingcart.js';
 import "./CSS/Card.css";
-// import 
+ import Shopping from './Components/Cartpage.js'; 
 
 
 
@@ -57,6 +57,7 @@ function App() {
             <Route path='/signup'element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
           {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             {/* <Route path ='/Cart'  element={<Cart/>}/> */}
+            <Route path = '/cart/all' element={<Shopping/>} />
 
             <Route path = '/login' element={<Login/>} />
             <Route path = '/Signin' element={<SignUp/>}/>
