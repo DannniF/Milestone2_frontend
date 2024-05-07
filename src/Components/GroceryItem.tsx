@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import Grocery from "./Grocery.jsx"
-import Food from "./Food.js"
+import Grocery from "./Grocery.tsx"
+import Food from "./Food.tsx"
 
 function GroceryItem(Foods){
     const [view,setView] = useState(false)

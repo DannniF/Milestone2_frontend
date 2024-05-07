@@ -2,7 +2,7 @@
 //useEffect: when page loads we need to fetch food
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Banner from './Banner';
+import Banner from './Banner.tsx';
 
 function Home() {
     const [foods, setFoods] = useState([])
@@ -23,7 +23,7 @@ function Home() {
 
     return (
         <div>
-            <Banner />
+            <Banner/>
         </div>
     )
 }

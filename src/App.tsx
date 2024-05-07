@@ -1,17 +1,16 @@
 import React, {useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Food from './Components/Food';
-import NewFood from './Components/NewFood';
-import Home from './Components/Home';
-import NewReview from './Components/NewReview';
-import Grocery from './Components/Grocery.jsx';
-import Login from './Components/Login';
-import SignUp from './Components/SignUp.js';
-import RandomFood from './Components/RandomFood.js';
-import UpdateForm from './Components/UpdateForm.js';
-import Footer from './Components/footer.js';
-import Cart from './Components/Newshoppingcart.js';
+import Navbar from './Components/Navbar.tsx';
+import Food from './Components/Food.tsx';
+import NewFood from './Components/NewFood.tsx';
+import Home from './Components/Home.tsx';
+import NewReview from './Components/NewReview.tsx';
+import Grocery from './Components/Grocery.tsx';
+import Login from './Components/Login.tsx';
+import SignUp from './Components/SignUp.tsx';
+import RandomFood from './Components/RandomFood.tsx';
+import UpdateForm from './Components/UpdateForm.tsx';
+import Footer from './Components/footer.tsx';
 import "./SCSS/index.css"
 // import 
 

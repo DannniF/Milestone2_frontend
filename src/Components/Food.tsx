@@ -3,8 +3,8 @@ import { useParams, useNavigate, Link} from "react-router-dom"
 import { Card,CardBody,CardSubtitle,CardImg,CardTitle, Button, CardText} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../SCSS/index.css'
-import Grocery from "./Grocery.jsx";
-import GroceryItem from "./GroceryItem";
+import Grocery from "./Grocery.js";
+import GroceryItem from "./GroceryItem.js";
 
 
 
