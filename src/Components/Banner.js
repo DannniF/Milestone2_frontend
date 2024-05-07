@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import Link from 'react-router-dom'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import '../CSS/Banner.css'
+import '../SCSS/index.css'
 import image10001 from '../image/10001.webp';
 import image10002 from '../image/10002.webp';
 

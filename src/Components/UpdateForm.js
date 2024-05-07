@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams, useNavigate, Link} from "react-router-dom"
 import { Card,CardBody,CardSubtitle,CardImg,CardTitle, Button, CardText} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../CSS/Card.css'
+import '../SCSS/index.css'
 
 
 

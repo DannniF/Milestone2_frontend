@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Card, CardBody, CardSubtitle, CardImg, CardTitle, Button, CardText } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../CSS/Card.css'
+import '../SCSS/index.css'
 import { random } from "node-forge";
 import UpdateForm from './UpdateForm'
 

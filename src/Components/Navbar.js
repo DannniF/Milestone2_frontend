@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
-import "../CSS/Navbar.css";
+import "../SCSS/index.css";
 
 
 function Navbar({ isLoggedIn, logout, reloadnavbar }) {

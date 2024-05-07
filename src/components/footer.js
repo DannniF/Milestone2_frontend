@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Footer.css';
+import '../SCSS/index.css';
 import Iframe from 'react-iframe';
 
 const Footer = () => {
